@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<LINK REL="STYLESHEET" HREF="Style.CSS">
+</head>
+<body>
+
+    <title>SQL Joins</title>
+                <h1 class="title">
+                    A-Z of Mircrosoft SQL
+                </h1>
+
+<div class="sidenav">
+  
+  <a href="mainpage.html" >Main Page</a>
+  <a href="introduction.html">Introduction</a>
+  <a href="basics.html">SSMS</a>
+  <a href="acronym.html">Acronym's used in SQL</a>
+  <a href="commands.html">SQL Commands</a>
+  <a href="functions.html" >SQL Functions</a>
+  <a href="storeproc.html">SQL Store Procedures</a>
+  <!-- <a href="dbobjects.html">SQL Database Objects</a> -->
+  <a href="views.html">SQL Views</a>
+  <a href="triggers.html">SQL Triggers</a>
+  <a href="operators.html">SQL Operators</a>
+  <a href="comments.html">SQL - Adding Comments</a>
+  <a href="alias.html" >SQL Alias</a>
+  <a href="joins.html">SQL Joins</a>
+  <a href="scripts.html">SQL - Building Basic Scripts</a>
+ 
+</div>
+
+<div class="main">
+    <h2>SQL Joins</h2>
+   <p>In a Relational Databases (RDBMS) joins are a important part of the game. For example - we cannot store all the data in one table only, which will be a very bad structure. Hence data is stored in multiple tables and we can use joins to bring them together</p>
+  <p>There are FOUR types of JOINS , please see examples for each of them below.</p>
+  <p>For Examples we will be Joining two tables from Adventurework2012 databases, created for this purpose
+  </p>
+  <p>LEFT TABLE :: [AdventureWorks2012].[Person].[Person_Temp] - 10000 records</p>
+  <p>RIGHT TABLE ::[AdventureWorks2012].[Person].[Password_Temp]- 15000 records</p>
+
+  <h2>[INNER] JOIN</h2>
+  <p>This join returns data if the records are in both the tables, I.e. if a person has data in Table A and Table B</p>
+  <p>This returns only 10000 records</p>
+  <IMG CLASS="pic2" SRC="INNERJOIN.PNG">
+>  <h2>LEFT [OUTER] JOIN</h2>
+  <p>This join returns data for all persons in the Left table- which is the from table, I.e. if a person has data in Table A , irrespective of Table B</p>
+  <p>This returns only 10000 records</p>
+  <IMG CLASS="pic2" SRC="leftJOIN.PNG">
+  <h2>RIGHT [OUTER] JOIN</h2>
+  <p>This join returns data for all persons in the Right table- which is the JOIN table, I.e. if a person has data in Table B , irrespective of Table A</p>
+  <p>This returns  15000 records</p>
+  <IMG CLASS="pic2" SRC="rightJOIN.PNG">
+  <h2>FULL [OUTER] JOIN</h2>
+  <p>This join returns data for all persons in the BOTH tables I.e. if a person has data in Table B  or in  Table A</p>
+  <p>This returns  15000 records</p>
+  <IMG CLASS="pic2" SRC="fullouterJOIN.PNG">
+    <h2>Venn Diagram to Understand the Joins</h2>
+    <IMG CLASS="pic2" SRC="JOINS.PNG">
+        <P>Data which is returned is represented in color Green</P>
+  <a href="scripts.html"><h3>Next Stop: SQL - Building Basic Scripts</h3></a>
+
+  </div>
+   
+</body>
+</html> 
