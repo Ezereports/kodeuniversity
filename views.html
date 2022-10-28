@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<LINK REL="stylesheet" HREF="style.css">
+</head>
+<body>
+
+    <title>Acronym's in SQL</title>
+                <h1 class="title">
+                    A-Z of Mircrosoft SQL
+                </h1>
+
+<div class="sidenav">
+    <a href="mainpage.html" >Main Page</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="basics.html">SSMS</a>
+    <a href="acronym.html">Acronym's used in SQL</a>
+    <a href="commands.html">SQL Commands</a>
+    <a href="functions.html" >SQL Functions</a>
+    <a href="storeproc.html">SQL Store Procedures</a>
+    <!-- <a href="dbobjects.html">SQL Database Objects</a> -->
+    <a href="views.html">SQL Views</a>
+    <a href="triggers.html">SQL Triggers</a>
+    <a href="operators.html">SQL Operators</a>
+    <a href="comments.html">SQL - Adding Comments</a>
+    <a href="alias.html" >SQL Alias</a>
+    <a href="joins.html">SQL Joins</a>
+    <a href="scripts.html">SQL - Building Basic Scripts</a>
+</div>
+
+<div class="main">
+    <h2>SQL Views</h2>
+   <p>Views in SQL are kind of virtual tables. A view also has rows and columns as they are in a real table in the database. We can create a view by selecting fields from one or more tables present in the database. A View can either have all the rows of a table or specific rows based on certain condition. In this article we will learn about creating , deleting and updating Views.</p>
+  <p>We can do the following for views.</p>
+  <p>1.Create Views</p>
+  <p>2.Update/ Alter views</p>
+  <p>2.Drop views</p>
+  <p>Below is a screenshot from SSMS on how to create, update or drop views.</p>
+  <IMG CLASS="pic2" src="view1.png">
+
+  <p><b><u>Advantages of using a View</u></b></p>
+  <p><b>Security</b></p>
+
+<p>Each user can be given permission to access the database only through a small set of views that contain the specific data the user is authorized to see, thus restricting the user's access to stored data
+</p>
+<p><b>Query Simplicity</b></p>
+
+<p>A view can draw data from several different tables and present it as a single table, turning multi-table queries into single-table queries against the view.</p>
+
+<p><b>Structural simplicity</b></p>
+
+<p>Views can give a user a "personalized" view of the database structure, presenting the database as a set of virtual tables that make sense for that user.</p>
+
+<p><b>Consistency</b></p>
+
+<p>A view can present a consistent, unchanged image of the structure of the database, even if the underlying source tables are split, restructured, or renamed.</p>
+
+<p><b>Data Integrity</b></p>
+
+<p>If data is accessed and entered through a view, the DBMS can automatically check the data to ensure that it meets the specified integrity constraints.</p>
+
+<p><b>Logical data independence.</b></p>
+
+<p>View can make the application and database tables to a certain extent independent. If there is no view, the application must be based on a table. With the view, the program can be established in view of above, to view the program with a database table to be separated.</p>
+
+<p><b><u>Disadvantages of views</u></b></p>
+
+<p><b>Performance</b></p>
+
+<p>Views create the appearance of a table, but the DBMS must still translate queries against the view into queries against the underlying source tables. If the view is defined by a complex, multi-table query then simple queries on the views may take considerable time.
+
+<p><b>Update restrictions</b></p>
+
+<p>When a user tries to update rows of a view, the DBMS must translate the request into an update on rows of the underlying source tables. This is possible for simple views, but more complex views are often restricted to read-only.
+</p>
+<a href="jobs.html"><h3>Next Stop: SQL Server Jobs</h3></a>
+<br>
+  </div>
+   
+</body>
+</html> 
