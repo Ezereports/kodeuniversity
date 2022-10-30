@@ -28,16 +28,36 @@
     <a href="alias.html" >SQL Alias</a>
     <a href="joins.html">SQL Joins</a>
     <a href="scripts.html">SQL - Building Basic Scripts</a>
+    <a href="helpfullinks.html">Questions or Suggestions</a>
 </div>
 
 <div class="main">
     <h2>SQL Triggers</h2>
-   <h4>Will have more details soon</h4>
+
+
   
+  <P>In SQL Server, triggers are database objects, actually, a special kind of stored procedure, which “reacts” to certain actions we make in the database. The main idea behind triggers is that they always perform an action in case some event happens. If we’re talking about DML triggers, these changes shall be changes in our data. Let’s examine a few interesting situations:
+</P>
+<P>1)In case you perform an insert in the call table, you want to update that related customer has 1 more call (in that case, we should have integer attribute in the customer table)
+  </P>
+    <P>2)When you complete a call (update call.end_time attribute value) you want to increase the counter of calls performed by that employee during that day (again, we should have such attribute in the employee table)
+    </P>
+        <P>3)When you try to delete an employee, you want to check if it has related calls. If so, you’ll prevent that delete and raise a custom exception
+        </P>
+
+<P>There are <b>THREE</b> types of <b>TRIGGERS</b></P>
+
+<p><b>DML (data manipulation language) triggers</b> – These triggers react to DML commands. 
+<p>INSERT</p>
+<p>UPDATE</p></p>
+<p>DELETE</p>
+<p><b>DDL (data definition language) triggers </b>– These triggers react to DDL commands </p>
+<p>CREATE</p>
+ <p> ALTER</p>
+    <p>DROP</p>
+    <p><b>Logon triggers </b>– This type reacts to LOGON events</p>
+          
   <a href="operators.html"><h3>Next Stop: SQL Operators</h3></a>
-  
-
-
   </div>
    
 </body>
