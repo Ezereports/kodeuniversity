@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <title>SQL Operator Examples</title>
+                <h1 class="title">
+                    A-Z of Mircrosoft SQL
+                </h1>
+
+<div class="sidenav">
+    <a href="index.html" >Main Page</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="basics.html">SSMS</a>
+    <a href="acronym.html">Acronym's used in SQL</a>
+    <a href="commands.html">SQL Commands</a>
+    <a href="functions.html" >SQL Functions</a>
+    <a href="storeproc.html">SQL Store Procedures</a>
+    <!-- <a href="dbobjects.html">SQL Database Objects</a> -->
+    <a href="views.html">SQL Views</a>
+    <a href="triggers.html">SQL Triggers</a>
+    <a href="operators.html">SQL Operators</a>
+    <a href="comments.html">SQL - Adding Comments</a>
+    <a href="alias.html" >SQL Alias</a>
+    <a href="joins.html">SQL Joins</a>
+    <a href="scripts.html">SQL - Building Basic Scripts</a>
+    <a href="helpfullinks.html">Questions or Suggestions</a>
+    <h2 style="border-radius: 20%">SQL Examples</h2>
+    <a style="color: red" href="arithmetic.html"> Arithmetic Operators</a>
+    <a style="color: red" href="comparision.html"> Comparision Operators</a>
+    <a style="color: red" href="logical.html"> Logical Operators</a>
+    <a style="color: red" href="bitwise.html">Bitwise Operators</a>
+</div>
+
+<div class="main">
+  
+ <h2 style="color: rgb(14, 186, 94); background-color: rgb(25, 17, 17)">Examples on how we use these Operators</h2>
+<p>Here are some Screenshots with real time results of how you can use the Operators. If used in correct way , they can help is powerful SQL transformations , data mining , data analysis.</p>
+
+<!-- <ul class="tabs">
+    <li data-tab-target="#cat1" STYLE="background-color: rgb(91, 228, 91); border-radius: 20%;" class="active tab">Arithmetic Operators</li>
+    <li data-tab-target="#cat2" STYLE="background-color: rgb(235, 96, 81); border-radius: 20%;"  class="tab" >Comparision Operators</li>
+    <li data-tab-target="#cat3" STYLE="background-color: rgb(101, 101, 238); border-radius: 20%;" class="tab">Logical Operators</li>
+    <li data-tab-target="#cat4" STYLE="background-color: rgb(214, 96, 237); border-radius: 20%;" class="tab">Bitwise Operators</li>
+  </ul>
+
+   -->
+
+
+
+
+
+
+
+
+
+<ul class="tabs">
+
+
+  <li  style="border-radius: 10%;" data-tab-target="#like" class="active tab"><p>LIKE</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#in" class="tab" ><p>IN</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#between" class="tab"><p>BETWEEN</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#and"  class="tab"><p>AND</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#or"  class="tab"><p>OR</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#some" class="tab" ><p>SOME</p></li>
+
+  <li  style="border-radius: 10%;" data-tab-target="#all" class="tab"><p>ALL</p></li>
+
+  <li  style="border-radius: 10%;" data-tab-target="#exists"  class="tab"><p>EXISTS</p></li>
+  
+  <li  style="border-radius: 10%;" data-tab-target="#any" class="tab" ><p>ANY</p></li>
+ 
+
+
+</ul>
+
+
+
+<div class="tab-content">
+<div id="like" data-tab-content class="active">
+  
+<p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+
+
+<h2 style="border-radius: 600%; border-width: 50%;">SQL LIKE Operator</h2>
+  
+<P> The <b style="color: red">LIKE</b> operator is used inside a <b style="color: blue">WHERE</b> clause . This helps us to serach for certain word or patterns of Strings in a Unstrcutred text. </P>
+<p>In the world of Data , most of the useful parts are present in Unstructured texts, like doctors notes, tweets on Twitter, Notes written in books etc. So if we 
+  learn this Operator well enough , it will prove very helpful
+</p>
+<p><b>Below are 6 different types of using <b style="color: red">LIKE</b> operator</b></p>
+<p>Lets assume the two letters we want to use are Letter1 and Letter2</p>
+<p>1.<b style="color: red">'%Letter1%'</b></p>
+<p>We can search to see if there are any words which have the two letters '<b style="color: red">am</b>' in between them at any point by doing..</p>
+<img class="pic2" src="like1.png">
+
+<p>2.<b style="color: red">'Letter1%'</b></p>
+<p>We can search to see if there are any words starting with letter '<b style="color: red">a</b>'  by doing..</p>
+<img class="pic2" src="like2.png">
+
+<p>3.<b style="color: red">'%Letter1'</b></p>
+<p>We can search to see if there are any words ending with letter '<b style="color: red">a</b>'  by doing..</p>
+<img class="pic2" src="like3.png">
+<p>4.<b style="color: red">'_Letter1%'</b></p>
+<p>We can search to see if there are any words ending with letter '<b style="color: red">a</b>' and has only One letter before it by doing..</p>
+<img class="pic2" src="like4.png">
+<p>5.<b style="color: red">'%Letter1_'</b></p>
+<p>We can search to see if there are any words starting with letter '<b style="color: red">a</b>' and has only One letter before it by doing..</p>
+<img class="pic2" src="like5.png">
+<p>6.<b style="color: red">'%Letter1%Letter2%'</b></p>
+<p>We can search to see if there are any words which have the letter '<b style="color: red">a</b>' and has '<b style="color: red">m</b>' at any point in order by doing..</p>
+<img class="pic2" src="like6.png">
+<p>Overall , if we use %- that means there could be any letter - one or more. Using _ means only one letter, if we can two letter we can use _ two times (__).</p>
+ 
+
+</div>
+
+<div id="in" data-tab-content >
+<p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL IN Operator</h2></p>
+    <p>If we need to filter for certain N number of values in a table, we can do this using <b style="color: red" >IN</b> operator</p>
+    <img class="pic2" src="in.png">
+    <p>Overall , this is helpful for cases with more than one value to filter on.</p>
+     
+
+
+</div>
+
+<div id="between" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL BETWEEN Operator</h2></p>
+        <p>If we need to filter for values withing a certain range, we can do using  <b style="color: red" >BETWEEN</b> operator</p>
+        <img class="pic2" src="between.png">
+        <p>We can use this operator for other things like Date range, ICD10 codes etc.</p>
+         
+    
+    
+    </div>
+
+<div id="or" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL OR Operator</h2></p>
+        <p>If we need to filter for values satisfying one or more conditions we can use  <b style="color: red" >OR</b> operator</p>
+        <p>Here , for example we check for data where it satisfy's the condition of BussinessEntityID or Certain First Names.</p>
+        <img class="pic2" src="or.png">
+        
+         
+    
+</div>
+<div id="and" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL AND Operator</h2></p>
+        <p>If we need to filter for values satisfying all conditions on multiple fields-  we can use  <b style="color: red" >AND</b> operator</p>
+        <p>Here , for example we check for data where it satisfy's the condition of BussinessEntityID and Certain First Names.</p>
+        <img class="pic2" src="and.png">
+        <p>This is usually a more restrictive filter, and returns lesser results.</p>
+         
+    
+</div>
+
+<div id="exists" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> and <b>[AdventureWorks2012].[Person].[PersonPhone]</b> table for this Operator
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL EXISTS Operator</h2></p>
+        <p>The <b style="color: red" >EXISTS</b> operator is used to test for the existence of any record in a subquery. It  returns TRUE if the subquery returns one or more records.</p>
+        <p>Here , for example we check for records where  BussinessEntityID exists in a different table. </p>
+        <img class="pic2" src="exists.png">
+        <p>A useful situation is when you have a recurring job, and need to load only new records, you can use <b style="color: red" >NOT EXISTS</b> in WHERE clause. This will prevent any duplicates being inserted.</p>
+         
+    
+</div>
+
+
+<div id="all" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> and <b>[AdventureWorks2012].[Person].[PersonPhone]</b> table for this Operator
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL ALL Operator</h2></p>
+        <p>The <b style="color: red" >ALL</b>  operator allow you to perform a comparison between a single column value and a range of other values.This returns a boolean value as a result, returns TRUE if ALL of the subquery values meet the condition. It means  that the condition will be true only if the operation is true for all values in the range.  </p>
+        <img class="pic2" src="all.png">
+        
+    
+</div>
+
+<div id="any" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> and <b>[AdventureWorks2012].[Person].[PersonPhone]</b> table for this Operator
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL ANY Operator</h2></p>
+        <p>The <b style="color: red" >ANY</b>  operator allow you to perform a comparison between a single column value and a range of other values.This returns a boolean value as a result. It means  that the condition will be true if the operation is true for any of the values in the range. </p>
+        <img class="pic2" src="any.png">
+      
+    
+</div>
+
+
+<div id="some" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> and <b>[AdventureWorks2012].[Person].[PersonPhone]</b> table for this Operator
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL SOME Operator</h2></p>
+        <p>The <b style="color: red" >SOME</b>  operator allow you to perform a comparison between a single column value and a range of other values.This returns a boolean value as a result. It means  that the condition will be true if the operation is true for any of the values in the range. </p>
+        <img class="pic2" src="some.png">
+      
+    
+</div>
+
+
+
+</div>
+
+
+
+
+  <a href="comments.html"><h3>Next Stop: SQL-Adding Comments</h3></a>
+  </div>
+   
+</body>
+</html> 
