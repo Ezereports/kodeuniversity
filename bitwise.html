@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <title>SQL Operator Examples</title>
+                <h1 class="title">
+                    A-Z of Mircrosoft SQL
+                </h1>
+
+<div class="sidenav">
+    <a href="index.html" >Main Page</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="basics.html">SSMS</a>
+    <a href="acronym.html">Acronym's used in SQL</a>
+    <a href="commands.html">SQL Commands</a>
+    <a href="functions.html" >SQL Functions</a>
+    <a href="storeproc.html">SQL Store Procedures</a>
+    <!-- <a href="dbobjects.html">SQL Database Objects</a> -->
+    <a href="views.html">SQL Views</a>
+    <a href="triggers.html">SQL Triggers</a>
+    <a href="operators.html">SQL Operators</a>
+    <a href="comments.html">SQL - Adding Comments</a>
+    <a href="alias.html" >SQL Alias</a>
+    <a href="joins.html">SQL Joins</a>
+    <a href="scripts.html">SQL - Building Basic Scripts</a>
+    <a href="helpfullinks.html">Questions or Suggestions</a>
+    <h2 style="border-radius: 20%">SQL Examples</h2>
+    <a style="color: red" href="arithmetic.html"> Arithmetic Operators</a>
+    <a style="color: red" href="comparision.html"> Comparision Operators</a>
+    <a style="color: red" href="logical.html"> Logical Operators</a>
+    <a style="color: red" href="bitwise.html">Bitwise Operators</a>
+</div>
+
+<div class="main">
+  
+ <h2 style="color: rgb(14, 186, 94); background-color: rgb(25, 17, 17)">Examples on how we use these Operators</h2>
+<p>Here are some Screenshots with real time results of how you can use the Operators. If used in correct way , they can help is powerful SQL transformations , data mining , data analysis.</p>
+
+
+
+
+
+<ul class="tabs">
+
+
+  <li  style="border-radius: 10%;" data-tab-target="#and1" class="active tab"><p>BitwiseAND</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#or" class="tab" ><p>BitwiseExclusiveOR</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#exor" class="tab"><p>BitwiseOR</p></li>
+  
+
+
+</ul>
+
+
+
+<div class="tab-content">
+
+
+<div id="and1" data-tab-content class="active" >
+<p>We will use two values 25 and 20 for this operation.</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL BitwiseAND Operator</h2></p>
+    <p><b style="color: red" >Bitwise And(&) </b> operator performs logical AND on each bit on two values, which means, both bits from two ends should be 1 to get the 1 else result will be 0.
+        For example, check the following image which contains query and result of '&' operator on 2 values.</p>
+    <img class="pic2" src="bitwiseand.png">
+    <p>Binary value for 25, 20 are 00011001 and 00010100 respectively. Now the calculation will be done as follows. If two bits are 1 then the result will be 1 otherwise 0.</p>
+    <img class="pic2" src="bitswiseand2.png">
+
+
+</div>
+
+<div id="or" data-tab-content >
+    <p>We will use two values 25 and 20 for this operation.</p>
+        <p><b style="color: red" >Bitwise Exclusive OR(^) </b> operator performs bitwise exclusive or on each bit on two values which means, only one of the two bits should be 1 to get 1 as result else we get 0 .
+            For example, check the following image which contains query and result of '^' operator on 2 values.</p>
+        <img class="pic2" src="bitwiseor.png">
+        <p>Binary value for 25, 20 are 00011001 and 00010100 respectively. Now the calculation will be done as follows.
+
+            When we are applying Bitwise Exclusive OR, result will be 1 when only one of the two bits is 1 else 0 even we have two bits are 1.</p>
+        <img class="pic2" src="bitwiseor2.png">
+    
+    </div>
+
+<div id="exor" data-tab-content >
+    <p>We will use two values 25 and 20 for this operation.</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL BitwiseExclusiveOR Operator</h2></p>
+        <p>Here is the results we see when doing   <b style="color: red" >BITWISE OR</b> operator</p>
+        <p>You can probably try to figure out what happened and share it to easyreportss@gmail.com?? ( Fun project)</p>
+        <img class="pic2" src="bitwiseexor.png">
+        
+         
+   
+
+
+
+</div>
+
+
+
+
+  <a href="comments.html"><h3>Next Stop: SQL-Adding Comments</h3></a>
+  </div>
+   
+</body>
+</html> 
