@@ -202,11 +202,42 @@
                                   </tr>
                                   
                               </table>
-                           
-  <a href="comments.html"><h3>Next Stop: SQL-Adding Comments</h3></a>
+                              <h2 style="color: black
+                              ; background-color: red">How to use these Operators</h2>
+<p>Here are some Screenshots of how you can use the Operators. If used in correct way , they can help is powerful SQL transformations , data mining , data analysis.</p>
+<p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+
+  <h2 style="border-radius: 600%; border-width: 50%;">SQL LIKE Operator</h2>
   
+  <P> The <b style="color: red">LIKE</b> operator is used inside a <b style="color: blue">WHERE</b> clause . This helps us to serach for certain word or patterns of Strings in a Unstrcutred text. </P>
+  <p>In the world of Data , most of the useful parts are present in Unstructured texts, like doctors notes, tweets on Twitter, Notes written in books etc. So if we 
+    learn this Operator well enough , it will prove very helpful
+  </p>
+  <p><b>Below are 6 different types of using <b style="color: red">LIKE</b> operator</b></p>
+  <p>Lets assume the two letters we want to use are Letter1 and Letter2</p>
+<p>1.<b style="color: red">'%Letter1%'</b></p>
+<p>We can search to see if there are any words which have the two letters '<b style="color: red">am</b>' in between them at any point by doing..</p>
+<img class="pic2" src="like1.png">
 
+<p>2.<b style="color: red">'Letter1%'</b></p>
+<p>We can search to see if there are any words starting with letter '<b style="color: red">a</b>'  by doing..</p>
+<img class="pic2" src="like2.png">
 
+<p>3.<b style="color: red">'%Letter1'</b></p>
+<p>We can search to see if there are any words ending with letter '<b style="color: red">a</b>'  by doing..</p>
+<img class="pic2" src="like3.png">
+<p>4.<b style="color: red">'_Letter1%'</b></p>
+<p>We can search to see if there are any words ending with letter '<b style="color: red">a</b>' and has only One letter before it by doing..</p>
+<img class="pic2" src="like4.png">
+<p>5.<b style="color: red">'%Letter1_'</b></p>
+<p>We can search to see if there are any words starting with letter '<b style="color: red">a</b>' and has only One letter before it by doing..</p>
+<img class="pic2" src="like5.png">
+<p>6.<b style="color: red">'%Letter1%Letter2%'</b></p>
+<p>We can search to see if there are any words which have the letter '<b style="color: red">a</b>' and has '<b style="color: red">m</b>' at any point in order by doing..</p>
+<img class="pic2" src="like6.png">
+<p>Overall , if we use %- that means there could be any letter - one or more. Using _ means only one letter, if we can two letter we can use _ two times (__).</p>
+  
+  <a href="comments.html"><h3>Next Stop: SQL-Adding Comments</h3></a>
   </div>
    
 </body>
