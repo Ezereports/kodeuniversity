@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <title>SQL Operator Examples</title>
+                <h1 class="title">
+                    A-Z of Mircrosoft SQL
+                </h1>
+                <div class="scrollbar" id="style-1">
+                    <div class="force-overflow"></div>
+                </div>
+<div class="sidenav">
+    <a href="index.html" >Main Page</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="basics.html">SSMS</a>
+    <a href="acronym.html">Acronym's used in SQL</a>
+    <a href="commands.html">SQL Commands</a>
+    <a href="functions.html" >SQL Functions</a>
+    <a href="storeproc.html">SQL Store Procedures</a>
+    <!-- <a href="dbobjects.html">SQL Database Objects</a> -->
+    <a href="views.html">SQL Views</a>
+    <a href="triggers.html">SQL Triggers</a>
+    <a href="operators.html">SQL Operators</a>
+    <a href="comments.html">SQL - Adding Comments</a>
+    <a href="alias.html" >SQL Alias</a>
+    <a href="joins.html">SQL Joins</a>
+    <a href="scripts.html">SQL - Building Basic Scripts</a>
+    <a href="helpfullinks.html">Questions or Suggestions</a>
+
+    <h2 style="border-radius: 20%">SQL Examples</h2>
+    <a  href="arithmetic.html"> Arithmetic Operators</a>
+    <a  href="comparision.html"> Comparision Operators</a>
+    <a  href="logical.html"> Logical Operators</a>
+    <a href="bitwise.html">Bitwise Operators</a>
+    <a href="stringfunctions.html">String Functions</a>
+    <a href="datefunctions.html">Date Functions</a>
+    <a href="numericfunctions.html">Numeric Functions</a>
+    <a style="color: red" href="stringfunctions.html">String Functions</a>
+    <a style="color: rgb(207, 225, 46)"href="datefunctions.html">Date Functions</a>
+    <a style="color: rgb(207, 225, 46)" href="numericfunctions.html">Numeric Functions</a>
+    
+</div>
+
+<div class="main">
+  
+ <h2 style="color: rgb(14, 186, 94); background-color: rgb(25, 17, 17)">Examples on how we use these Operators</h2>
+<p>Here are some Screenshots with real time results of how you can use the Operators. If used in correct way , they can help is powerful SQL transformations , data mining , data analysis.</p>
+
+
+
+
+
+<ul class="tabs2">
+
+  <li  style="border-radius: 10%;;" data-tab-target="#UPPER" class="active tab"><p>UPPER</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#LOWER" class="tab"><p>LOWER</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#UNICODE" class="tab" ><p>UNICODE</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#TRIM" class="tab"><p>TRIM</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#TRANSLATE" class="tab"><p>TRANSLATE</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#SUBSTRING" class="tab"><p>SUBSTRING</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#STUFF" class="tab"><p>STUFF</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#SPACE" class="tab" ><p>SPACE</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#SOUNDEX" class="tab"><p>SOUNDEX</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#RIGHT" class="tab"><p>RIGHT</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#LEFT" class="tab"><p>LEFT</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#REVERSE" class="tab"><p>REVERSE</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#REPLICATE" class="tab"><p>REPLICATE</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#REPLACE" class="tab" ><p>REPLACE</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#QUOTENAME" class="tab"><p>QUOTENAME</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#CHAR" class="tab"><p>CHAR</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#CHARINDEX" class="tab"><p>CHARINDEX</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#CONCAT" class="tab"><p>CONCAT</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#DATALENGTH" class="tab" ><p>DATALENGTH</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#FORMAT" class="tab"><p>FORMAT</p></li>
+ <li  style="border-radius: 10%;" data-tab-target="#LEN" class="tab"><p>LEN</p></li>
+ <li  style="border-radius: 10%;" data-tab-target="#PATINDEX" class="tab" ><p>PATINDEX</p></li>
+<li  style="border-radius: 10%;" data-tab-target="#ASCII" class="tab"><p>ASCII</p></li>
+  
+
+
+</ul>
+
+
+
+<div class="tab-content">
+
+
+<div id="UPPER" data-tab-content class="active" >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL UPPER Function</h2></p>
+    <p><b style="color: red" >UPPER</b> function can be used to return all the characters in UPPER CASE values. </p>
+    <img class="pic2" src="upper.png">
+  
+
+</div>
+
+<div id="LOWER" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL LOWER Function</h2></p>
+    <p><b style="color: red" >LOWER</b> function can be used to return all the characters in LOWER CASE values. </p>
+    <img class="pic2" src="lower.png">
+  
+</div>
+
+<div id="UNICODE" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL UNICODE Function</h2></p>
+    <p><b style="color: red" >UNICODE</b> function can be used to return ASCII value of the word. </p>
+    <img class="pic2" src="unicode.png">
+  
+</div>
+
+<div id="TRIM" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL TRIM Function</h2></p>
+    <p><b style="color: red" >TRIM</b> function can be used to remove leading , trailing or both strings from a value. </p>
+    <p>Examples are : </p>
+    <p>SELECT TRIM( '     test    ') AS Result;</p>
+    <p>SELECT TRIM(LEADING '.,! ' FROM  '     .#     test    .') AS Result;</p>
+    <p>SELECT TRIM(TRAILING '.,! ' FROM '     .#     test    .') AS Result;</p>
+    <p>You can try this in 2017 and further editions.</p>
+    
+</div>
+
+<div id="TRANSLATE" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL TRANSLATE Function</h2></p>
+    <p><b style="color: red" >TRANSLATE</b> function can be used Returns the string provided as a first argument, after some characters specified in the second argument are translated into a destination set of characters, specified in the third argument. </p>
+    <p>Syntax: </p>
+
+    <p>TRANSLATE ( inputString, characters, translations )</p>
+    <p>Example: </p>
+    <p>SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');</p>
+  
+</div>
+
+<div id="SUBSTRING" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL SUBSTRING Function</h2></p>
+    <p><b style="color: red" >SUBSTRING</b> function can be used to return only a part of the bigger string or word from a field. </p>
+    <img class="pic2" src="substring.png">
+  
+</div>
+
+<div id="STUFF" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL STUFF Function</h2></p>
+    <p><b style="color: red" >STUFF</b> function can be used literally stuff all the values for similar records into on row. Here of example we stuff all the names of persons based on persontype,</p>
+    <img class="pic2" src="stuff.png">
+  
+</div>
+<div id="SPACE" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL SPACE Function</h2></p>
+    <p><b style="color: red" >SPACE</b> function can be used add some trailing spaces before , after or in between. </p>
+    <img class="pic2" src="space.png">
+  
+</div>
+<div id="SOUNDEX" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL SOUNDEX Function</h2></p>
+    <p><b style="color: red" >SOUNDEX</b> function can be return the values , based on how they sound when pronounced. </p>
+    <p>Can be used to  evaluate the similarity of two strings.</p>
+    <img class="pic2" src="soundex.png">
+  
+</div>
+
+<div id="RIGHT" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL RIGHT Function</h2></p>
+    <p><b style="color: red" >RIGHT</b> function can be return the characters staring from the right of given value. We can restrict the number of characters too. </p>
+    <img class="pic2" src="rightf.png">
+  
+</div>
+
+<div id="LEFT" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL LEFT Function</h2></p>
+    <p><b style="color: red" >LEFT</b> function can be return the characters staring from the right of given value. We can restrict the number of characters too. </p>
+    <img class="pic2" src="leftf.png">
+  
+</div>
+
+<div id="REVERSE" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL REVERSE Function</h2></p>
+    <p><b style="color: red" >REVERSE</b> function can be return the characters in reverse order. </p>
+    <img class="pic2" src="reverse.png">
+  
+</div>
+
+<div id="REPLICATE" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL REPLICATE Function</h2></p>
+    <p><b style="color: red" >REPLICATE</b> function can be used to return the characters repeated in addition to the existing value. We can also tell how many times to replicate </p>
+    <img class="pic2" src="replicate.png">
+  
+</div>
+
+<div id="REPLACE" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL REPLACE Function</h2></p>
+    <p><b style="color: red" >REPLACE</b> function can be used to replace a certain character or characters with something else. </p>
+    <img class="pic2" src="replace.png">
+  
+</div>
+
+<div id="QUOTENAME" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL QUOTENAME Function</h2></p>
+    <p><b style="color: red" >QUOTENAME</b> function can be used to add Quotes to the values.. </p>
+    <img class="pic2" src="quotename.png">
+  
+</div>
+
+<div id="CHAR" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL CHAR Function</h2></p>
+    <p><b style="color: red" >CHAR</b> function can be used to add certain values like a line break etc based on ASCII value. In this example we add a line break, which can be noticed once we copy the result into SSMS query editer. </p>
+    <img class="pic2" src="char.png">
+  
+</div>
+<div id="CHARINDEX" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL CHARINDEX Function</h2></p>
+    <p><b style="color: red" >CHARINDEX</b> function can be used to get the numeric value or the character , where it is present in the string or value. </p>
+    <img class="pic2" src="charindex.png">
+  
+</div>
+
+<div id="CONCAT" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL CONCAT Function</h2></p>
+    <p><b style="color: red" >CONCAT</b> function can be used add multiple strings and create a new column with all of them together. </p>
+    <img class="pic2" src="concat.png">
+  
+</div>
+
+<div id="DATALENGTH" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL DATALENGTH Function</h2></p>
+    <p><b style="color: red" >DATALENGTH</b> function can be used return the DATALENGTH of the string value. </p>
+    <img class="pic2" src="datalength.png">
+  
+</div>
+
+<div id="FORMAT" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL FORMAT Function</h2></p>
+    <p><b style="color: red" >FORMAT</b> function can be used to format the values in certain methods. </p>
+    <p>For example here we format the date according to USA and BRITISH format.</p>
+    <img class="pic2" src="format.png">
+  
+</div>
+
+
+<div id="LEN" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL LEN Function</h2></p>
+    <p><b style="color: red" >LEN</b> function can be used to get the number of Characters in a string. </p>
+    
+    <img class="pic2" src="len.png">
+  
+</div>
+
+
+<div id="PATINDEX" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL PATINDEX Function</h2></p>
+    <p><b style="color: red" >PATINDEX</b> function can be used to get numeric value of where a certain character is present in a string or words.[First occurence of the character]. </p>
+    
+    <img class="pic2" src="patindex.png">
+  
+</div>
+
+<div id="ASCII" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL ASCII Function</h2></p>
+    <p><b style="color: red" >ASCII</b> function can be used to get ASCII value of the first character. </p>
+    
+    <img class="pic2" src="ascii.png">
+  
+</div>
+  <a href="datefunctions.html"><h3>Next Stop: Date Functions</h3></a>
+  </div>
+   
+</body>
+</html> 
