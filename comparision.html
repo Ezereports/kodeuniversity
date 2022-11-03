@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <title>SQL Operator Examples</title>
+                <h1 class="title">
+                    A-Z of Mircrosoft SQL
+                </h1>
+
+<div class="sidenav">
+    <a href="index.html" >Main Page</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="basics.html">SSMS</a>
+    <a href="acronym.html">Acronym's used in SQL</a>
+    <a href="commands.html">SQL Commands</a>
+    <a href="functions.html" >SQL Functions</a>
+    <a href="storeproc.html">SQL Store Procedures</a>
+    <!-- <a href="dbobjects.html">SQL Database Objects</a> -->
+    <a href="views.html">SQL Views</a>
+    <a href="triggers.html">SQL Triggers</a>
+    <a href="operators.html">SQL Operators</a>
+    <a href="comments.html">SQL - Adding Comments</a>
+    <a href="alias.html" >SQL Alias</a>
+    <a href="joins.html">SQL Joins</a>
+    <a href="scripts.html">SQL - Building Basic Scripts</a>
+    <a href="helpfullinks.html">Questions or Suggestions</a>
+    <h2 style="border-radius: 20%">SQL Examples</h2>
+    <a  style="color: rgb(207, 225, 46)"href="arithmetic.html"> Arithmetic Operators</a>
+    <a style="color: red" href="comparision.html"> Comparision Operators</a>
+    <a  style="color: rgb(207, 225, 46)"href="logical.html"> Logical Operators</a>
+    <a  style="color: rgb(207, 225, 46)"href="bitwise.html">Bitwise Operators</a>
+</div>
+
+<div class="main">
+  
+ <h2 style="color: rgb(14, 186, 94); background-color: rgb(25, 17, 17)">Examples on how we use these Operators</h2>
+<p>Here are some Screenshots with real time results of how you can use the Operators. If used in correct way , they can help is powerful SQL transformations , data mining , data analysis.</p>
+
+
+
+
+
+<ul class="tabs">
+
+
+  <li  style="border-radius: 10%;" data-tab-target="#equal" class="active tab"><p>Equal to[=]</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#notequal" class="tab" ><p>Not equal[!=] or [<>]</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#gt" class="tab"><p>Greater than[>]/[>=]</p></li>
+    <li  style="border-radius: 10%;" data-tab-target="#ls" class="tab"><p>Less than[<]/[<=]</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#nls" class="tab"><p>Not less than[!<] or [!>]</p></li>
+
+
+</ul>
+
+
+
+<div class="tab-content">
+
+
+<div id="equal" data-tab-content class="active" >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL EQUAL TO Operator</h2></p>
+    <p><b style="color: red" >Equal to[=]</b> operator can be used in WHERE clause or CASE statement etc. It makes sure the value is equal to value we need.</p>
+    <p>Notice below we check to make sure for data where modified data is 1/1/2012</p>
+    <p>Checks if the values of two operands are equal or not, if yes then condition becomes true.</p>
+    <img class="pic2" src="equal.png">
+  
+
+</div>
+
+<div id="notequal" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL NOT EQUAL TO Operator</h2></p>
+    <p><b style="color: red" >Not equal[!=]/[<>]</b> operator can be used in WHERE clause or CASE statement etc. It makes sure the value is equal to value we need.</p>
+    <p>Notice below we check to make sure for data where modified data is not equal to 1/1/2012. Both symbols work the same way.</p>
+    <p>Checks if the values of two operands are equal or not, if values are not equal then condition becomes true.</p>
+    <img class="pic2" src="notequal.png">
+  
+       
+    
+    </div>
+
+<div id="gt" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL GREATER THAN/ GREATER THAN EQUAL TO Operator</h2></p>
+     
+    <p><b style="color: red" >Greater than[>]</b> operator can be used in WHERE clause or CASE statement etc. It makes sure the value is greater than the value we provide.</p>
+    <p>Notice below we check to make sure for data where modified data is greater than 1/1/2012</p>
+    <img class="pic2" src="gtthn.png">
+  
+    <p><b style="color: red" >Greater than equal to [>=]</b> operator can be used in WHERE clause or CASE statement etc. It makes sure the value is greater than or equal to the value we provide.</p>
+    <p>Notice below we check to make sure for data where modified data is greater than or equal to 1/1/2012</p>
+    <img class="pic2" src="gththneqqual.png">
+        
+</div>
+<div id="ls" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL LESS THAN/ LESS THAN EQUAL TO Operator</h2></p>
+        
+    <p><b style="color: red" >Less than[<]</b> operator can be used in WHERE clause or CASE statement etc. It makes sure the value is less than the value we provide.</p>
+    <p>Notice below we check to make sure for data where modified data is less than 1/1/2012</p>
+    <img class="pic2" src="gtthn.png">
+  
+    <p><b style="color: red" >Less than equal to [<=]</b> operator can be used in WHERE clause or CASE statement etc. It makes sure the value is less than or equal to the value we provide.</p>
+    <p>Notice below we check to make sure for data where modified data is less than or equal to 1/1/2012</p>
+    <img class="pic2" src="gththneqqual.png">
+      
+        
+</div>
+<div id="nls" data-tab-content >
+    <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+      
+    <h2 style="border-radius: 600%; border-width: 50%;">SQL NOT LESS THAN / NOT GREATER THAN Operator</h2></p>
+    
+    
+    <p><b style="color: red" >Not less than[!<]</b> operator can be used in WHERE clause or CASE statement etc. It makes sure the value is not less than the value we provide.</p>
+    <p>Notice below we check to make sure  its false  for data where modified data is less than 1/1/2012</p>
+    <p>That means it will still pull cases where modified data is 1/1/2012</p>
+    <img class="pic2" src="ntls.png">
+  
+    <p><b style="color: red" >Not greater than[!>]</b> operator can be used in WHERE clause or CASE statement etc. It makes sure the value is not greater than or equal to the value we provide.</p>
+    <p>Notice below we check to make sure its false for data where modified data is greater than  to 1/1/2012</p>
+    <p>That means it will still pull cases where modified data is 1/1/2012</p>
+    <img class="pic2" src="ntgtth.png">
+      
+        
+</div>
+
+
+
+
+  <a href="logical.html"><h3>Next Stop: Logical Operators</h3></a>
+  </div>
+   
+</body>
+</html> 
