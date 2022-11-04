@@ -56,40 +56,158 @@
 
 
 <ul class="tabs2">
- COMMING SOON! 
-  <!-- <li  style="border-radius: 10%;;" data-tab-target="#UPPER" class="active tab"><p>UPPER</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#LOWER" class="tab"><p>LOWER</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#UNICODE" class="tab" ><p>UNICODE</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#TRIM" class="tab"><p>TRIM</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#TRANSLATE" class="tab"><p>TRANSLATE</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#SUBSTRING" class="tab"><p>SUBSTRING</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#STUFF" class="tab"><p>STUFF</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#SPACE" class="tab" ><p>SPACE</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#SOUNDEX" class="tab"><p>SOUNDEX</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#RIGHT" class="tab"><p>RIGHT</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#LEFT" class="tab"><p>LEFT</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#REVERSE" class="tab"><p>REVERSE</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#REPLICATE" class="tab"><p>REPLICATE</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#REPLACE" class="tab" ><p>REPLACE</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#QUOTENAME" class="tab"><p>QUOTENAME</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#CHAR" class="tab"><p>CHAR</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#CHARINDEX" class="tab"><p>CHARINDEX</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#CONCAT" class="tab"><p>CONCAT</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#DATALENGTH" class="tab" ><p>DATALENGTH</p></li>
-  <li  style="border-radius: 10%;" data-tab-target="#FORMAT" class="tab"><p>FORMAT</p></li>
- <li  style="border-radius: 10%;" data-tab-target="#LEN" class="tab"><p>LEN</p></li>
- <li  style="border-radius: 10%;" data-tab-target="#PATINDEX" class="tab" ><p>PATINDEX</p></li>
-<li  style="border-radius: 10%;" data-tab-target="#ASCII" class="tab"><p>ASCII</p></li> -->
-  
+    <!-- CURRENT_TIMESTAMP	Returns the current date and time
+    DATEADD	Adds a time/date interval to a date and then returns the date
+    DATEDIFF	Returns the difference between two dates
+    DATEFROMPARTS	Returns a date from the specified parts (year, month, and day values)
+    DATENAME	Returns a specified part of a date (as string)
+    DATEPART	Returns a specified part of a date (as integer)
+    DAY	Returns the day of the month for a specified date
+    GETDATE	Returns the current database system date and time
+    GETUTCDATE	Returns the current database system UTC date and time
+    ISDATE	Checks an expression and returns 1 if it is a valid date, otherwise 0
+    MONTH	Returns the month part for a specified date (a number from 1 to 12)
+    SYSDATETIME	Returns the date and time of the SQL Server
+    YEAR	Returns the year part for a specified date -->
+<li  style="border-radius: 10%;;" data-tab-target="#CURRENT_TIMESTAMP" class="active tab"><p>CURRENT_TIMESTAMP</p></li>
+<li  style="border-radius: 10%;" data-tab-target="#GETDATE" class="tab" ><p>GETDATE</p></li>
+<li  style="border-radius: 10%;" data-tab-target="#GETUTCDATE" class="tab"><p>GETUTCDATE</p></li>
+<li  style="border-radius: 10%;" data-tab-target="#SYSDATETIME" class="tab"><p>SYSDATETIME</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#DATEADD" class="tab"><p>DATEADD</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#DATEDIFF" class="tab" ><p>DATEDIFF</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#DATEFROMPARTS" class="tab"><p>DATEFROMPARTS</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#DATENAME" class="tab"><p>DATENAME</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#DATEPART" class="tab"><p>DATEPART</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#DAY" class="tab"><p>DAY</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#MONTH" class="tab"><p>MONTH</p></li>
+  <li  style="border-radius: 10%;" data-tab-target="#YEAR" class="tab"><p>YEAR</p></li>
+<li  style="border-radius: 10%;" data-tab-target="#ISDATE" class="tab"><p>ISDATE</p></li>
 
-
-</ul>
+</ul> 
 
 
 
 <div class="tab-content">
 
+    <div id="CURRENT_TIMESTAMP" data-tab-content class="active" >
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL CURRENT_TIMESTAMP Function</h2></p>
+        <p><b style="color: red" >CURRENT_TIMESTAMP</b> function can be used to return the current date time according to the system. </p>
+        <img class="pic2" src="df1.png">
+      
+    
+    </div>
 
+    <div id="GETDATE" data-tab-content>
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL GETDATE Function</h2></p>
+        <p><b style="color: red" >GETDATE</b> functioncan be used to return the current date time according to the system. </p>
+        <img class="pic2" src="df9.png">
+      
+    
+    </div>
+
+    <div id="GETUTCDATE" data-tab-content>
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL GETUTCDATE Function</h2></p>
+        <p><b style="color: red" >GETUTCDATE</b> function can be used to return the current UTC date time according to the system. </p>
+        <img class="pic2" src="df10.png">
+      
+    
+    </div>
+    <div id="SYSDATETIME" data-tab-content>
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL SYSDATETIME Function</h2></p>
+        <p><b style="color: red" >SYSDATETIME</b> function can be used to return the current date time according to the system. </p>
+        <img class="pic2" src="df12.png">
+      
+    
+    </div>
+
+    <div id="DATEADD" data-tab-content >
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL DATEADD Function</h2></p>
+        <p><b style="color: red" >DATEADD</b> function can be used to ADD or SUBTRACT certain number of days , months or years for a given date.
+        For Subtraction we just give the negative number. </p>
+        <img class="pic2" src="df2.png">
+      
+    
+    </div>
+
+    <div id="DATEDIFF" data-tab-content>
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL DATEDIFF Function</h2></p>
+        <p><b style="color: red" >DATEDIFF</b> function can be used to get the difference between two sets or dates. </p>
+        <img class="pic2" src="df3.png">
+
+    
+    </div>
+    <div id="DATEFROMPARTS" data-tab-content >
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL DATEFROMPARTS Function</h2></p>
+        <p><b style="color: red" >DATEFROMPARTS</b> function can be used create a date format values , from three different values .(Day, Month, Year). </p>
+        <img class="pic2" src="df4.png">
+      
+    
+    </div>
+
+    <div id="DATENAME" data-tab-content >
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL DATENAME Function</h2></p>
+        <p><b style="color: red" >DATENAME</b> function can be used to return the YEAR/MONTH/DAY of Date Field. </p>
+        <img class="pic2" src="df5.png">
+        <p>Here are some syntax which we can use</p>
+        <img class="pic2" src="datepart.png">
+      
+    
+    </div>
+
+    <div id="DATEPART"  data-tab-content>
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL DATEPART Function</h2></p>
+        <p><b style="color: red" >DATEPART</b> function can be used to return the DAY/MONTH/YEAR values from a date field. </p>
+        <img class="pic2" src="df100.png">
+      
+      
+    
+    </div>
+    <div id="DAY"  data-tab-content>
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL DAY Function</h2></p>
+        <p><b style="color: red" >DAY</b> function can be used to return DAY value from a date field. </p>
+        <img class="pic2" src="df6.png">
+      
+    
+    </div>
+
+    <div id="MONTH"  data-tab-content>
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL MONTH Function</h2></p>
+        <p><b style="color: red" >MONTH</b> function can be used to return MONTH value from a date field. </p>
+        <img class="pic2" src="df7.png">
+      
+    
+    </div>
+
+    <div id="YEAR" data-tab-content >
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL YEAR Function</h2></p>
+        <p><b style="color: red" >YEAR</b> function function can be used to return DAYEARY value from a date field. </p>
+        <img class="pic2" src="df8.png">
+      
+    
+    </div>
+     <div id="ISDATE" data-tab-content >
+        <p>We will use <b>[AdventureWorks2012].[Person].[Person]</b> table for this Operator</p>
+        <h2 style="border-radius: 600%; border-width: 50%;">SQL ISDATE Function</h2></p>
+        <p><b style="color: red" >ISDATE</b> function can be used check if a certain field is a date field or not. </p>
+        <p>In below example we check if two fields are date fields or not. If its a date field 1 is returned, if its not a date field it returns 0.</p>
+        <img class="pic2" src="df11.png">
+      
+    
+    </div>
+
+    
   <a href="numericfunctions.html"><h3>Next Stop: Numeric Functions</h3></a>
   </div>
    
