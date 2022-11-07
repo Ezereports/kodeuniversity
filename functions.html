@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Learn about SQL FUNCTIONS and descriptions.">
 <LINK REL="stylesheet" HREF="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -39,342 +40,378 @@
     <a style ="color: yellow" href="numericfunctions.html">Numeric Functions</a>
 </div>
 
+
+
+
+
 <div class="main">
     <h2>SQL Functions</h2>
     <p>A function is a database object in SQL Server. Basically, it is a set of SQL statements that accept only input parameters, perform actions and return the result. The function can return only a single value or a table. We can't use a function to Insert, Update, Delete records in the database table(s)</p>
     <p>They are two types mainly.</p>
     <p>1. System Defined Functions</p>
     <p>2. User Defined Functions</p>
-    <h2>System Defined Functions</h2>
-    <P>SQL Provides many useful built in functions and new ones are added time to time. We need to make sure we are using the updated version on SSMS in order to use them.</P>
-    <h3 STYLE="background: rgb(149, 252, 149)">SQL STRING FUNCTIONS</h3>
-    <table style="width:100%">
-        <tr>
-          <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Function Name</th>
-          
-          <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Decsription</th>
-        </tr>
-        <tr>
-        <td style="text-align:left;">UPPER</td>
-        <td style="text-align:left;">	Converts a string to upper-case</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">UNICODE</td>
-            <td style="text-align:left;">	Returns the Unicode value for the first character of the input expression</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">TRIM</td>
-            <td style="text-align:left;">Removes leading and trailing spaces (or other specified characters) from a string</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">TRANSLATE</td>
-            <td style="text-align:left;">Returns the string from the first argument after the characters specified in the second argument are translated into the characters specified in the third argument.</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">SUBSTRING</td>
-            <td style="text-align:left;">Extracts some characters from a string</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">STUFF</td>
-            <td style="text-align:left;">Deletes a part of a string and then inserts another part into the string, starting at a specified position</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">STR</td>
-            <td style="text-align:left;">	Returns a number as string</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">SPACE</td>
-            <td style="text-align:left;">Returns a string of the specified number of space characters</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">SOUNDEX</td>
-            <td style="text-align:left;">	Returns a four-character code to evaluate the similarity of two strings</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">RTRIM</td>
-            <td style="text-align:left;">Removes trailing spaces from a string</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">RIGHT</td>
-            <td style="text-align:left;">	Extracts a number of characters from a string (starting from right)</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">REVERSE</td>
-            <td style="text-align:left;">	Reverses a string and returns the result</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">REPLICATE</td>
-            <td style="text-align:left;">Repeats a string a specified number of times</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">REPLACE</td>
-            <td style="text-align:left;">Replaces all occurrences of a substring within a string, with a new substring</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">QUOTENAME</td>
-            <td style="text-align:left;">Returns a Unicode string with delimiters added to make the string a valid SQL Server delimited identifier</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">CHAR</td>
-            <td style="text-align:left;">	Returns the character based on the ASCII code</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">CHARINDEX</td>
-            <td style="text-align:left;">Returns the position of a substring in a string</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">CONCAT</td>
-            <td style="text-align:left;">	Adds two or more strings together</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">Concat with +</td>
-            <td style="text-align:left;">Adds two or more strings together</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">CONCAT_WS</td>
-            <td style="text-align:left;">	Adds two or more strings together with a separator</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">DATALENGTH</td>
-            <td style="text-align:left;">	Returns the number of bytes used to represent an expression</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">DIFFERENCE</td>
-            <td style="text-align:left;">	Compares two SOUNDEX values, and returns an integer value</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">FORMAT</td>
-            <td style="text-align:left;">Formats a value with the specified format</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">LEFT</td>
-            <td style="text-align:left;">Extracts a number of characters from a string (starting from left)</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">LEN</td>
-            <td style="text-align:left;">Returns the length of a string</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">LOWER</td>
-            <td style="text-align:left;">Converts a string to lower-case</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">LTRIM</td>
-            <td style="text-align:left;">Removes leading spaces from a string</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">NCHAR</td>
-            <td style="text-align:left;">Returns the Unicode character based on the number code</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">PATINDEX</td>
-            <td style="text-align:left;">	Returns the position of a pattern in a string</td>
-        </tr>
-        <tr>
-            <td style="text-align:left;">ASCII</td>
-            <td style="text-align:left;">Returns the ASCII value for the specific character</td>
-        </tr>
-    </table>
-    <h3 STYLE="background: rgb(149, 252, 149)">SQL NUMERIC FUNCTIONS</h3>
+    <ul class="tabs">
+
+
+        <li  style="border-radius: 10%;" data-tab-target="#sdf" class="active tab"><p>System Defined Functions</p></li>
+        <li  style="border-radius: 10%;" data-tab-target="#udf" class="tab" ><p>User Defined Functions</p></li>
+      
+      
+      </ul>
+  
     
-    <table style="width:100%">
-        <tr>
-          <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Function Name</th>
+      <div id="sdf" data-tab-content  class="active">
+        <!-- <ul class="tabs">
+
+
+            <li  style="border-radius: 10%;" data-tab-target="#sf" class="active tab"><p>SQL String Functions</p></li>
+            <li  style="border-radius: 10%;" data-tab-target="#nf" class="tab" ><p>SQL Numeric Functions</p></li>
+            <li  style="border-radius: 10%;" data-tab-target="#df" class="tab" ><p>SQL Date Functions</p></li>
           
-          <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Decsription</th>
-        </tr>
-    <tr>
-        
-        <tr>
-            <td>AVG</td>
-            <td>Returns the average value of an expression</td>
-            </tr>
-            <tr>
-            <td>CEILING</td>
-            <td>Returns the smallest integer value that is &gt;= a number</td>
-            </tr>
-            <tr>
-            <td>COUNT</td>
-            <td>Returns the number of records returned by a select query</td>
-            </tr>
-            <tr>
-            <td>COS</td>
-            <td>Returns the cosine of a number</td>
-            </tr>
-            <tr>
-            <td>COT</td>
-            <td>Returns the cotangent of a number</td>
-            </tr>
-            <tr>
-            <td>DEGREES</td>
-            <td>Converts a value in radians to degrees</td>
-            </tr>
-            <tr>
-            <td>EXP</td>
-            <td>Returns e raised to the power of a specified number</td>
-            </tr>
-            <tr>
-            <td>FLOOR</td>
-            <td>Returns the largest integer value that is &lt;= to a number</td>
-            </tr>
-            <tr>
-            <td>LOG</td>
-            <td>Returns the natural logarithm of a number, or the logarithm of a number to a 
-            specified base</td>
-            </tr>
-            <td>ABS</td>
-            <td>Returns the absolute value of a number</td>
-            </tr>
-            <tr>
-            <td>ACOS</td>
-            <td>Returns the arc cosine of a number</td>
-            </tr>
-            <tr>
-            <td>ASIN</td>
-            <td>Returns the arc sine of a number</td>
-            </tr>
-            <tr>
-            <td>ATAN</td>
-            <td>Returns the arc tangent of a number</td>
-            </tr>
-            <tr>
-            <td>ATN2</td>
-            <td>Returns the arc tangent of two numbers</td>
-            </tr>
-            <tr>
-            <td>LOG10</td>
-            <td>Returns the natural logarithm of a number to base 10</td>
-            </tr>
-            <tr>
-            <td>MAX</td>
-            <td>Returns the maximum value in a set of values</td>
-            </tr>
-            <tr>
-            <td>MIN</td>
-            <td>Returns the minimum value in a set of values</td>
-            </tr>
-            <tr>
-            <td>PI</td>
-            <td>Returns the value of PI</td>
-            </tr>
-            <tr>
-            <td>POWER</td>
-            <td>Returns the value of a number raised to the power of another number</td>
-            </tr>
-            <tr>
-            <td>RADIANS</td>
-            <td>Converts a degree value into radians</td>
-            </tr>
-            <tr>
-            <td>RAND</td>
-            <td>Returns a random number</td>
-            </tr>
-            <tr>
-            <td>ROUND</td>
-            <td>Rounds a number to a specified number of decimal places</td>
-            </tr>
-            <tr>
-            <td>SIGN</td>
-            <td>Returns the sign of a number</td>
-            </tr>
-            <tr>
-            <td>SIN</td>
-            <td>Returns the sine of a number</td>
-            </tr>
-            <tr>
-            <td>SQRT</td>
-            <td>Returns the square root of a number</td>
-            </tr>
-            <tr>
-            <td>SQUARE</td>
-            <td>Returns the square of a number</td>
-            </tr>
-            <tr>
-            <td>SUM</td>
-            <td>Calculates the sum of a set of values</td>
-            </tr>
-            <tr>
-            <td>TAN</td>
-            <td>Returns the tangent of a number</td>
-        </tr>
-        </table>
-        <h3 STYLE="background: rgb(149, 252, 149)">SQL DATE FUNCTIONS</h3>
-    
-        <tbody><table style="width:100%">
-            <tr>
-              <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Function Name</th>
+            <div id="sf" data-tab-content  class="active">
+            </div>
+            <div id="nf" data-tab-content  >
+            </div>
+            <div id="df" data-tab-content  >
+            </div>
+          </ul> -->
+          <h2>System Defined Functions</h2>
+          <P>SQL Provides many useful built in functions and new ones are added time to time. We need to make sure we are using the updated version on SSMS in order to use them.</P>
+          <h3 STYLE="background: rgb(149, 252, 149)">SQL STRING FUNCTIONS</h3>
+          <table style="width:100%">
+              <tr>
+                <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Function Name</th>
+                
+                <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Decsription</th>
+              </tr>
+              <tr>
+              <td style="text-align:left;">UPPER</td>
+              <td style="text-align:left;">	Converts a string to upper-case</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">UNICODE</td>
+                  <td style="text-align:left;">	Returns the Unicode value for the first character of the input expression</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">TRIM</td>
+                  <td style="text-align:left;">Removes leading and trailing spaces (or other specified characters) from a string</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">TRANSLATE</td>
+                  <td style="text-align:left;">Returns the string from the first argument after the characters specified in the second argument are translated into the characters specified in the third argument.</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">SUBSTRING</td>
+                  <td style="text-align:left;">Extracts some characters from a string</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">STUFF</td>
+                  <td style="text-align:left;">Deletes a part of a string and then inserts another part into the string, starting at a specified position</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">STR</td>
+                  <td style="text-align:left;">	Returns a number as string</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">SPACE</td>
+                  <td style="text-align:left;">Returns a string of the specified number of space characters</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">SOUNDEX</td>
+                  <td style="text-align:left;">	Returns a four-character code to evaluate the similarity of two strings</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">RTRIM</td>
+                  <td style="text-align:left;">Removes trailing spaces from a string</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">RIGHT</td>
+                  <td style="text-align:left;">	Extracts a number of characters from a string (starting from right)</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">REVERSE</td>
+                  <td style="text-align:left;">	Reverses a string and returns the result</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">REPLICATE</td>
+                  <td style="text-align:left;">Repeats a string a specified number of times</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">REPLACE</td>
+                  <td style="text-align:left;">Replaces all occurrences of a substring within a string, with a new substring</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">QUOTENAME</td>
+                  <td style="text-align:left;">Returns a Unicode string with delimiters added to make the string a valid SQL Server delimited identifier</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">CHAR</td>
+                  <td style="text-align:left;">	Returns the character based on the ASCII code</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">CHARINDEX</td>
+                  <td style="text-align:left;">Returns the position of a substring in a string</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">CONCAT</td>
+                  <td style="text-align:left;">	Adds two or more strings together</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">Concat with +</td>
+                  <td style="text-align:left;">Adds two or more strings together</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">CONCAT_WS</td>
+                  <td style="text-align:left;">	Adds two or more strings together with a separator</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">DATALENGTH</td>
+                  <td style="text-align:left;">	Returns the number of bytes used to represent an expression</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">DIFFERENCE</td>
+                  <td style="text-align:left;">	Compares two SOUNDEX values, and returns an integer value</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">FORMAT</td>
+                  <td style="text-align:left;">Formats a value with the specified format</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">LEFT</td>
+                  <td style="text-align:left;">Extracts a number of characters from a string (starting from left)</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">LEN</td>
+                  <td style="text-align:left;">Returns the length of a string</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">LOWER</td>
+                  <td style="text-align:left;">Converts a string to lower-case</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">LTRIM</td>
+                  <td style="text-align:left;">Removes leading spaces from a string</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">NCHAR</td>
+                  <td style="text-align:left;">Returns the Unicode character based on the number code</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">PATINDEX</td>
+                  <td style="text-align:left;">	Returns the position of a pattern in a string</td>
+              </tr>
+              <tr>
+                  <td style="text-align:left;">ASCII</td>
+                  <td style="text-align:left;">Returns the ASCII value for the specific character</td>
+              </tr>
+          </table>
+          <h3 STYLE="background: rgb(149, 252, 149)">SQL NUMERIC FUNCTIONS</h3>
+          
+          <table style="width:100%">
+              <tr>
+                <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Function Name</th>
+                
+                <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Decsription</th>
+              </tr>
+          <tr>
               
-              <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Decsription</th>
-            </tr>
+              <tr>
+                  <td>AVG</td>
+                  <td>Returns the average value of an expression</td>
+                  </tr>
+                  <tr>
+                  <td>CEILING</td>
+                  <td>Returns the smallest integer value that is &gt;= a number</td>
+                  </tr>
+                  <tr>
+                  <td>COUNT</td>
+                  <td>Returns the number of records returned by a select query</td>
+                  </tr>
+                  <tr>
+                  <td>COS</td>
+                  <td>Returns the cosine of a number</td>
+                  </tr>
+                  <tr>
+                  <td>COT</td>
+                  <td>Returns the cotangent of a number</td>
+                  </tr>
+                  <tr>
+                  <td>DEGREES</td>
+                  <td>Converts a value in radians to degrees</td>
+                  </tr>
+                  <tr>
+                  <td>EXP</td>
+                  <td>Returns e raised to the power of a specified number</td>
+                  </tr>
+                  <tr>
+                  <td>FLOOR</td>
+                  <td>Returns the largest integer value that is &lt;= to a number</td>
+                  </tr>
+                  <tr>
+                  <td>LOG</td>
+                  <td>Returns the natural logarithm of a number, or the logarithm of a number to a 
+                  specified base</td>
+                  </tr>
+                  <td>ABS</td>
+                  <td>Returns the absolute value of a number</td>
+                  </tr>
+                  <tr>
+                  <td>ACOS</td>
+                  <td>Returns the arc cosine of a number</td>
+                  </tr>
+                  <tr>
+                  <td>ASIN</td>
+                  <td>Returns the arc sine of a number</td>
+                  </tr>
+                  <tr>
+                  <td>ATAN</td>
+                  <td>Returns the arc tangent of a number</td>
+                  </tr>
+                  <tr>
+                  <td>ATN2</td>
+                  <td>Returns the arc tangent of two numbers</td>
+                  </tr>
+                  <tr>
+                  <td>LOG10</td>
+                  <td>Returns the natural logarithm of a number to base 10</td>
+                  </tr>
+                  <tr>
+                  <td>MAX</td>
+                  <td>Returns the maximum value in a set of values</td>
+                  </tr>
+                  <tr>
+                  <td>MIN</td>
+                  <td>Returns the minimum value in a set of values</td>
+                  </tr>
+                  <tr>
+                  <td>PI</td>
+                  <td>Returns the value of PI</td>
+                  </tr>
+                  <tr>
+                  <td>POWER</td>
+                  <td>Returns the value of a number raised to the power of another number</td>
+                  </tr>
+                  <tr>
+                  <td>RADIANS</td>
+                  <td>Converts a degree value into radians</td>
+                  </tr>
+                  <tr>
+                  <td>RAND</td>
+                  <td>Returns a random number</td>
+                  </tr>
+                  <tr>
+                  <td>ROUND</td>
+                  <td>Rounds a number to a specified number of decimal places</td>
+                  </tr>
+                  <tr>
+                  <td>SIGN</td>
+                  <td>Returns the sign of a number</td>
+                  </tr>
+                  <tr>
+                  <td>SIN</td>
+                  <td>Returns the sine of a number</td>
+                  </tr>
+                  <tr>
+                  <td>SQRT</td>
+                  <td>Returns the square root of a number</td>
+                  </tr>
+                  <tr>
+                  <td>SQUARE</td>
+                  <td>Returns the square of a number</td>
+                  </tr>
+                  <tr>
+                  <td>SUM</td>
+                  <td>Calculates the sum of a set of values</td>
+                  </tr>
+                  <tr>
+                  <td>TAN</td>
+                  <td>Returns the tangent of a number</td>
+              </tr>
+              </table>
+              <h3 STYLE="background: rgb(149, 252, 149)">SQL DATE FUNCTIONS</h3>
+          
+              <tbody><table style="width:100%">
+                  <tr>
+                    <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Function Name</th>
+                    
+                    <th style="text-align:left; background-color: rgba(71, 176, 50, 0.409);">Decsription</th>
+                  </tr>
+              <tr>
+                  <td>CURRENT_TIMESTAMP</td>
+        <td>Returns the current date and time</td>
+        </tr>
         <tr>
-            <td>CURRENT_TIMESTAMP</td>
-  <td>Returns the current date and time</td>
-  </tr>
-  <tr>
-  <td>DATEADD</td>
-  <td>Adds a time/date interval to a date and then returns the date</td>
-  </tr>
-  <tr>
-  <td>DATEDIFF</td>
-  <td>Returns the difference between two dates</td>
-  </tr>
-  <tr>
-  <td>DATEFROMPARTS</td>
-  <td>Returns a date from the specified parts (year, month, and day values)</td>
-  </tr>
-  <tr>
-  <td>DATENAME</td>
-  <td>Returns a specified part of a date (as string)</td>
-  </tr>
-  <tr>
-  <td>DATEPART</td>
-  <td>Returns a specified part of a date (as integer)</td>
-  </tr>
-  <tr>
-  <td>DAY</td>
-  <td>Returns the day of the month for a specified date</td>
-  </tr>
-  <tr>
-  <td>GETDATE</td>
-  <td>Returns the current database system date and time</td>
-  </tr>
-  <tr>
-  <td>GETUTCDATE</td>
-  <td>Returns the current database system UTC date and time</td>
-  </tr>
-  <tr>
-  <td>ISDATE</td>
-  <td>Checks an expression and returns 1 if it is a valid date, otherwise 0</td>
-  </tr>
-  <tr>
-  <td>MONTH</td>
-  <td>Returns the month part for a specified date (a number from 1 to 12)</td>
-  </tr>
-  <tr>
-  <td>SYSDATETIME</td>
-  <td>Returns the date and time of the SQL Server</td>
-  </tr>
-  <tr>
-  <td>YEAR</td>
-  <td>Returns the year part for a specified date</td>
-  </tr>
-  </tbody>
-        </tABLE>
+        <td>DATEADD</td>
+        <td>Adds a time/date interval to a date and then returns the date</td>
+        </tr>
+        <tr>
+        <td>DATEDIFF</td>
+        <td>Returns the difference between two dates</td>
+        </tr>
+        <tr>
+        <td>DATEFROMPARTS</td>
+        <td>Returns a date from the specified parts (year, month, and day values)</td>
+        </tr>
+        <tr>
+        <td>DATENAME</td>
+        <td>Returns a specified part of a date (as string)</td>
+        </tr>
+        <tr>
+        <td>DATEPART</td>
+        <td>Returns a specified part of a date (as integer)</td>
+        </tr>
+        <tr>
+        <td>DAY</td>
+        <td>Returns the day of the month for a specified date</td>
+        </tr>
+        <tr>
+        <td>GETDATE</td>
+        <td>Returns the current database system date and time</td>
+        </tr>
+        <tr>
+        <td>GETUTCDATE</td>
+        <td>Returns the current database system UTC date and time</td>
+        </tr>
+        <tr>
+        <td>ISDATE</td>
+        <td>Checks an expression and returns 1 if it is a valid date, otherwise 0</td>
+        </tr>
+        <tr>
+        <td>MONTH</td>
+        <td>Returns the month part for a specified date (a number from 1 to 12)</td>
+        </tr>
+        <tr>
+        <td>SYSDATETIME</td>
+        <td>Returns the date and time of the SQL Server</td>
+        </tr>
+        <tr>
+        <td>YEAR</td>
+        <td>Returns the year part for a specified date</td>
+        </tr>
+        </tbody>
+              </tABLE>
+        </div>
 
-<H2>User Defined Functions</H2>
+        <div id="udf" data-tab-content >
+            <H2>User Defined Functions</H2>
 
-  <p>Users can create there own functions which are refered as "user -defined functions". These functions can accept requried parameters
-    , perform required actions and give the results. he user-defined functions hold the code that is needed to query data a lot easier to write. It also improves query readability, accessibility, and functionality, as well as allows other developers to replicate the same procedures accordingly.
+            <p>Users can create there own functions which are refered as "user -defined functions". These functions can accept requried parameters
+              , perform required actions and give the results. he user-defined functions hold the code that is needed to query data a lot easier to write. It also improves query readability, accessibility, and functionality, as well as allows other developers to replicate the same procedures accordingly.
+          
+            </p>
+          <p>These functions are created by the user in the system database or in a user-defined database. We have three types of user-defined functions.</p>
+          <p><b>1. Scalar Function</b></p>
+          <p>An SQL scalar function is a user-defined function written in SQL and it returns a single value each time it is invoked. SQL scalar functions contain the source code for the user-defined function in the user-defined function definition. There are two kinds of SQL scalar functions, inlined and compiled.</p>
+          <p><b>2. Inline Table-Valued Function</b></p>
+          <p>An inline table-valued function (iTVF) is a table expression that can accept parameters, perform an action and provide as its return value, a table.</p>
+          <p><b>3. Multi-Statement Table-Valued Function</b></p>
+          <p>What is multi statement table valued function in SQL Server?
+              The multistatement table-valued, user-defined function combines the scalar function's capability to contain complex code with the inline table-valued function's capability to return a result set. This type of function creates a table variable and then populates it within code.</p>
+          
+            
+            </div>
+    
 
-  </p>
-<p>These functions are created by the user in the system database or in a user-defined database. We have three types of user-defined functions.</p>
-<p><b>1. Scalar Function</b></p>
-<p>An SQL scalar function is a user-defined function written in SQL and it returns a single value each time it is invoked. SQL scalar functions contain the source code for the user-defined function in the user-defined function definition. There are two kinds of SQL scalar functions, inlined and compiled.</p>
-<p><b>2. Inline Table-Valued Function</b></p>
-<p>An inline table-valued function (iTVF) is a table expression that can accept parameters, perform an action and provide as its return value, a table.</p>
-<p><b>3. Multi-Statement Table-Valued Function</b></p>
-<p>What is multi statement table valued function in SQL Server?
-    The multistatement table-valued, user-defined function combines the scalar function's capability to contain complex code with the inline table-valued function's capability to return a result set. This type of function creates a table variable and then populates it within code.</p>
 <a href="storeproc.html"><h3>Next Stop: SQL Store Procedures</h3></a>
   </div>
    
