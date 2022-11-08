@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Learn about SQL Alias and how we use in for tables and columns.">
 <LINK REL="stylesheet" HREF="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -44,7 +45,15 @@
    <p>Alias= An assumed Name or Identity</p>
    <p>A lot of times we need to change the Column Name or table Name temporarily , this is where we can use Alias</p>
    <p>This is very useful while joining multiple tables in RDBMS</p>
-   <h2>Column Name - Alias</h2>
+   <ul class="tabs">
+
+
+    <li  style="border-radius: 10%;" data-tab-target="#cn" class="active tab"><p>Column Name Alias</p></li>
+    <li  style="border-radius: 10%;" data-tab-target="#tn" class="tab" ><p>Table/View Name Alias </p></li>
+
+  </ul>
+  <div id="cn" data-tab-content  >
+    <h2>Column Name - Alias</h2>
     <p>SENARIO- Your company asked you to give a report , with Person details. But they wanted to rename FirstName as FNAME , LastName as LNAME.
     You can do the below query.</p>
 
@@ -56,12 +65,21 @@
     <br>
     3) Use '=' sign, but note that the Alias name should come first in this case.
     </p>
-    <img class="pic2" src="alias1.png">
+    <img class="pic2" src="alias1.png" alt="SQL- Using a Alias column name">
 
+
+  </div>
+  <div id="tn" data-tab-content class="active" >
+    
    <h2>Table/View Name - Alias</h2>
    <P>Alias for Table /  View names are very helpful when we join two or more tables/ views.This helps us specify the column is in which table easily.</P>
    <P>In the below example notic how we name one table A another table B and use it before column Names</P> 
-   <img class="pic2" src="alias2.png">
+   <img class="pic2" src="alias2.png" alt="SQL- Using a Alias Table name">
+
+  </div>
+
+   
+
    <a href="joins.html"><h3>Next Stop: SQL Joins</h3></a>
      
 
