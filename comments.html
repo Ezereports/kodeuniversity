@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Learn about using Comments in SQL Queries.">
 <LINK REL="stylesheet" HREF="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -39,23 +40,42 @@
     <a href="numericfunctions.html">Numeric Functions</a>
 </div>
 
+
 <div class="main">
     <h2>SQL Comments</h2>
     <P>When you write your SQL scripts , many times it runs into hundered of lines and it is very important to write some comments so we can refer to them later.</P>
     <P>Also you can write a part of code and comment it out so we can use if for future , or it wont be used anymore.</P>
     <P>They are baiscally two types-  examples on how we can use comments are given below</P>
+    <ul class="tabs">
+
+
+        <li  style="border-radius: 10%;" data-tab-target="#sc" class="active tab"><p>Single Line Comments</p></li>
+        <li  style="border-radius: 10%;" data-tab-target="#mc" class="tab" ><p>Multiple Line Comments</p></li>
+        
+    
+      
+      </ul>
+
+      
+  <div id="sc" data-tab-content class="active" >
     <h2>Single Line Comments</h2>
     <P>We can add single line comments by entering '--' at the begining of a certain line. </P>
-    <img CLASS="pic2" SRC="cmt1.png">
+    <img CLASS="pic2" SRC="cmt1.png" alt="Commenting out a single line in SQL">
     <P>We can use this to comment out any SQL as well, this we when we run the script - results are not generated for that part.</P>
-    <img CLASS="pic2" SRC="cmt2.png">
+    <img CLASS="pic2" SRC="cmt2.png" alt="Commenting out a MULTIPLE lines using a single line comment in SQL">
 
     <P>In case we need to comment out multiple line, this method may be cumborsome , this leads us to the next type below.</P>
+  </div>
+  
+  <div id="mc" data-tab-content >
     <h2>Multiple Line Comments</h2>
     <P>We can comment out multiple Lines of a code , or write information in multiple lines by using '/*' at the begining and '*/' at the end</P>
     <P>Below we comment out all three lines using the method.</P>
     
-    <img CLASS="pic2" SRC="cmt3.png">
+    <img CLASS="pic2" SRC="cmt3.png" alt="Commenting out multiple lines of code in SQL">
+  </div>
+   
+
     <a href="alias.html"><h3>Next Stop: SQL Alias</h3></a>
      
 
