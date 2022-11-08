@@ -3,6 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Learn about SQL Joins with examples.">
+<script src="script.js" defer></script>
 <LINK REL="stylesheet" HREF="style.css">
 </head>
 <body>
@@ -43,32 +44,57 @@
     <h2>SQL Joins</h2>
    <p>In a Relational Databases (RDBMS) joins are a important part of the game. For example - we cannot store all the data in one table only, which will be a very bad structure. Hence data is stored in multiple tables and we can use joins to bring them together</p>
   <p>There are FOUR types of JOINS , please see examples for each of them below.</p>
+  <h2>Venn Diagram to Understand the Joins</h2>
+  <IMG CLASS="pic2" SRC="joins.png">
+      <P>Data which is returned is represented in color Green</P>
+
   <p>For Examples we will be Joining two tables from Adventurework2012 databases, created for this purpose
   </p>
   <p>LEFT TABLE :: [AdventureWorks2012].[Person].[Person_Temp] - 10000 records</p>
   <p>RIGHT TABLE ::[AdventureWorks2012].[Person].[Password_Temp]- 15000 records</p>
 
-  <h2>[INNER] JOIN</h2>
+  <ul class="tabs">
+
+
+    <li  style="border-radius: 10%;" data-tab-target="#ij" class="active tab"><p>Inner JOIN</p></li>
+    <li  style="border-radius: 10%;" data-tab-target="#lj" class="tab" ><p>Left JOIN</p></li>
+    <li  style="border-radius: 10%;" data-tab-target="#rj" class="tab"><p>Right JOIN</p></li>
+    <li  style="border-radius: 10%;" data-tab-target="#oj"  class="tab"><p>Full Outer JOIN</p></li>
+
+  
+  </ul>
+
+  <div id="ij" data-tab-content class="active" >
+    <h2>[INNER] JOIN</h2>
   <p>This join returns data if the records are in both the tables, I.e. if a person has data in Table A and Table B</p>
   <p>This returns only 10000 records</p>
-  <IMG CLASS="pic2" SRC="innerjoin.png">
->  <h2>LEFT [OUTER] JOIN</h2>
-  <p>This join returns data for all persons in the Left table- which is the from table, I.e. if a person has data in Table A , irrespective of Table B</p>
-  <p>This returns only 10000 records</p>
-  <IMG CLASS="pic2" SRC="leftjoin.png">
-  <h2>RIGHT [OUTER] JOIN</h2>
-  <p>This join returns data for all persons in the Right table- which is the JOIN table, I.e. if a person has data in Table B , irrespective of Table A</p>
-  <p>This returns  15000 records</p>
-  <IMG CLASS="pic2" SRC="rightjoin.png">
-  <h2>FULL [OUTER] JOIN</h2>
-  <p>This join returns data for all persons in the BOTH tables I.e. if a person has data in Table B  or in  Table A</p>
-  <p>This returns  15000 records</p>
-  <IMG CLASS="pic2" SRC="fullouterjoin.png">
-    <h2>Venn Diagram to Understand the Joins</h2>
-    <IMG CLASS="pic2" SRC="joins.png">
-        <P>Data which is returned is represented in color Green</P>
-  <a href="scripts.html"><h3>Next Stop: SQL - Building Basic Scripts</h3></a>
+  <IMG CLASS="pic2" SRC="innerjoin.png" alt="SQL Inner join">
+  </div>
+  <div id="lj" data-tab-content >
+    <h2>LEFT [OUTER] JOIN</h2>
+    <p>This join returns data for all persons in the Left table- which is the from table, I.e. if a person has data in Table A , irrespective of Table B</p>
+    <p>This returns only 10000 records</p>
+    <IMG CLASS="pic2" SRC="leftjoin.png" alt="SQL Left join">
+  </div>
+  <div id="rj" data-tab-content >
+    <h2>RIGHT [OUTER] JOIN</h2>
+    <p>This join returns data for all persons in the Right table- which is the JOIN table, I.e. if a person has data in Table B , irrespective of Table A</p>
+    <p>This returns  15000 records</p>
+    <IMG CLASS="pic2" SRC="rightjoin.png" alt="SQL Right join">
+  </div>
+  <div id="oj" data-tab-content >
+    <h2>FULL [OUTER] JOIN</h2>
+    <p>This join returns data for all persons in the BOTH tables I.e. if a person has data in Table B  or in  Table A</p>
+    <p>This returns  15000 records</p>
+    <IMG CLASS="pic2" SRC="fullouterjoin.png" alt="SQL FullOuter join">
+  </div>
 
+  
+
+ 
+ 
+  
+    <a href="scripts.html"><h3>Next Stop: SQL - Building Basic Scripts</h3></a>
   </div>
    
 </body>
