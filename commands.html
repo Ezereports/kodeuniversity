@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Learn about different types of SQL Commands.">
 <LINK REL="stylesheet" HREF="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -39,43 +40,63 @@
     <a href="numericfunctions.html">Numeric Functions</a>
 </div>
 
+
+
+
 <div class="main">
     <h2>SQL Commands</h2>
     <p>SQL works through set of Commands , these are grouped based on what actions they do.</p>
     <p>Below is a cheat sheet for commands we mostly use. They can be classifed into FOUR types.</p>
-   <IMG CLASS="pic2" SRC="sqlcommands.png">
-    <h2>DDL (Date Definition Language) Commands</h2>
-    <p>DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database.
-<br> <br>
-<b> CREATE</b> – to create database and its objects like (table, index, views, store procedure, function and triggers).
-        <br> <b>ALTER</b>  – alters the structure of the existing database.
-        <br><b>DROP</b>  – delete objects from the database.
-        <br><b>TRUNCATE</b> – remove all records from a table; also, all spaces allocated for the records are removed.
-        <br><b>COMMENT</b> – add comments to the data dictionary.
-        <br><b>RENAME</b> – rename an object.</p>
-    <h2>DML (Data Manipulation Language) Commands</h2>
-    <p>DML is short name of Data Manipulation Language which deals with data manipulation, and includes most common SQL statements such SELECT, INSERT, UPDATE, DELETE etc, and it is used to store, modify, retrieve, delete and update data in database.
-        <br> <br> <br>
-        <b>SELECT</b> – retrieve data from one or more tables.
-        <br> <b>INSERT</b> – insert data into a table.
-        <br><b>UPDATE</b> – updates existing data within a table.
-        <br><b>DELETE</b> – delete all records from a table.
-        <br><b>MERGE</b>  – UPSERT operation (insert or update)
-        <br> <b>CALL</b> – call a PL/SQL or Java subprogram.
-        <br> <b>EXPLAIN PLAN</b>  – interpretation of the data access path.
-        <br><b>LOCK TABLE</b> – concurrency control.</p>
-    <h2>DCL (Data Control Language) Commands</h2>
-    <p>DCL is short name of Data Control Language which includes commands such as GRANT, and mostly concerned with rights, permissions and other controls of the database system.
-        <br>
-        <br><b>GRANT</b> – allow users access privileges to database.
-        <br> <b>REVOKE</b> – withdraw users access privileges given by using the GRANT command.</p>
-    <h2>TCL (Transaction Control Language) Commands</h2>
-    <p>TCL is short name of Transaction Control Language which deals with transaction within a database.
-        <br>
-        <br><b>COMMIT</b> – commits a transaction.
-        <br><b>ROLLBACK</b> – rollback a transaction in case of any error occurs.
-        <br><b>SAVEPOINT</b> – a point inside a transaction that allows rollback state to what it was at the time of the savepoint.
-        <br><b>SET TRANSACTION</b> – specify characteristics for the transaction.</p>
+   <IMG CLASS="pic2" SRC="sqlcommands.png" alt="Cheat sheet for SQL Commands used frequently">
+
+    <ul class="tabs">
+
+
+        <li  style="border-radius: 10%;" data-tab-target="#DDL" class="active tab"><p>DDL</p></li>
+        <li  style="border-radius: 10%;" data-tab-target="#DML" class="tab" ><p>DML</p></li>
+        <li  style="border-radius: 10%;" data-tab-target="#DCL" class="tab"><p>DCL</p></li>
+        <li  style="border-radius: 10%;" data-tab-target="#TCL"  class="tab"><p>TCL</p></li>
+    
+      
+      </ul>
+
+      <div id="DDL" data-tab-content class="active" ><h2>DDL (Data Definition Language) Commands</h2>
+        <p>DDL is short name of Data Definition Language, which deals with database schemas and descriptions, of how the data should reside in the database.
+    <br> <br>
+    <b> CREATE</b> – to create database and its objects like (table, index, views, store procedure, function and triggers).
+            <br> <b>ALTER</b>  – alters the structure of the existing database.
+            <br><b>DROP</b>  – delete objects from the database.
+            <br><b>TRUNCATE</b> – remove all records from a table; also, all spaces allocated for the records are removed.
+            <br><b>COMMENT</b> – add comments to the data dictionary.
+            <br><b>RENAME</b> – rename an object.</p></div>
+      <div id="DML" data-tab-content  > <h2>DML (Data Manipulation Language) Commands</h2>
+        <p>DML is short name of Data Manipulation Language which deals with data manipulation, and includes most common SQL statements such SELECT, INSERT, UPDATE, DELETE etc, and it is used to store, modify, retrieve, delete and update data in database.
+            <br> <br> <br>
+            <b>SELECT</b> – retrieve data from one or more tables.
+            <br> <b>INSERT</b> – insert data into a table.
+            <br><b>UPDATE</b> – updates existing data within a table.
+            <br><b>DELETE</b> – delete all records from a table.
+            <br><b>MERGE</b>  – UPSERT operation (insert or update)
+            <br> <b>CALL</b> – call a PL/SQL or Java subprogram.
+            <br> <b>EXPLAIN PLAN</b>  – interpretation of the data access path.
+            <br><b>LOCK TABLE</b> – concurrency control.</p></div>
+      <div id="DCL" data-tab-content  >  
+        <h2>DCL (Data Control Language) Commands</h2>
+        <p>DCL is short name of Data Control Language which includes commands such as GRANT, and mostly concerned with rights, permissions and other controls of the database system.
+            <br>
+            <br><b>GRANT</b> – allow users access privileges to database.
+            <br> <b>REVOKE</b> – withdraw users access privileges given by using the GRANT command.</p></div>
+      <div id="TCL" data-tab-content  >
+        <h2>TCL (Transaction Control Language) Commands</h2>
+        <p>TCL is short name of Transaction Control Language which deals with transaction within a database.
+            <br>
+            <br><b>COMMIT</b> – commits a transaction.
+            <br><b>ROLLBACK</b> – rollback a transaction in case of any error occurs.
+            <br><b>SAVEPOINT</b> – a point inside a transaction that allows rollback state to what it was at the time of the savepoint.
+            <br><b>SET TRANSACTION</b> – specify characteristics for the transaction.</p></div>
+
+    
+ 
   
   <a href="functions.html"><h3>Next Stop: SQL Functions</h3></a>
   
