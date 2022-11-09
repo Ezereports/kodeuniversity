@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Learn about SQL Stored Procedures with examples.">
+<meta name="Keywords" content=" Execution plans, SQL  ,  T-SQL, MICROSOFT SQL, w3schools SQL, How to,  , AI, Git, Data Science, Code Game, Tutorials, Programming, Web Development, Training, Learning, Quiz, Exercises, Courses, Lessons, References, Examples, Learn to code, Source code, Demos, Tips, Website">
+<script src="script.js" defer></script>
+<LINK REL="stylesheet" HREF="style.css">
+</head>
+<body>
+
+    <title>SQL - Performance Tuning</title>
+                <h1 class="title">
+                    A-Z of Mircrosoft SQL
+                </h1>
+
+<div class="sidenav">
+    <a href="index.html" >Main Page</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="basics.html">SSMS</a>
+    <a href="acronym.html">Acronym's used in SQL</a>
+    <a href="commands.html">SQL Commands</a>
+    <a href="functions.html" >SQL Functions</a>
+    <a href="storeproc.html">SQL Store Procedures</a>
+    <!-- <a href="dbobjects.html">SQL Database Objects</a> -->
+    <a href="views.html">SQL Views</a>
+    <a href="triggers.html">SQL Triggers</a>
+    <a href="operators.html">SQL Operators</a>
+    <a href="comments.html">SQL - Adding Comments</a>
+    <a href="alias.html" >SQL Alias</a>
+    <a href="joins.html">SQL Joins</a>
+    <a href="scripts.html">SQL - Building Basic Scripts</a>
+    <a   style="color: red"  href="sql_execution_plan.html">SQL - Execution Plan</a>
+    <a href="helpfullinks.html">Questions or Suggestions</a>
+    <h2 style="border-radius: 20%">SQL Examples</h2>
+    <a  href="arithmetic.html"> Arithmetic Operators</a>
+    <a  href="comparision.html"> Comparision Operators</a>
+    <a  href="logical.html"> Logical Operators</a>
+    <a  href="bitwise.html">Bitwise Operators</a>
+    <a href="stringfunctions.html">String Functions</a>
+    <a href="datefunctions.html">Date Functions</a>
+    <a href="numericfunctions.html">Numeric Functions</a>
+</div>
+
+<div class="main">
+    <h2>SQL- Execution Plan</h2>
+    <!-- <p>The purpose of databases are not only to store vast amounts of data, but the ability to EXTRACT data when needed, TRANSFORM and RE LOAD as needed.
+        Since these records run into millions of rows easily , performace tuning is a very important part of day to day job
+    </p>
+    <p>Overall we can define Performance tuning as <b style="color:rgb(232, 16, 16)">"The good practices we need to keep in mind while developing queries, so we can 
+        accomplish a given task in the minimum amount of time , effeciently."
+    </b></p>
+    <p> Perfomance tuning is a vast subject and involves Hardware and Software steps. We will try to focus on how we can 
+        imporve our queries to do performance tuning.</p> -->
+ <p>As a data professional, it is crucial that we comprehend how to create effective queries that produce quicker results and how to tweak queries that operate slowly to improve performance. We must be aware of the logical processes carried out by the query processor in order to comprehend how the database engine functions in the background. Investigating the execution plans produced by the query processor will help with this. In SQL Server, the query optimizer creates an execution plan, which is a straightforward graphical depiction of the actions it does to determine the most effective method to produce a set of results.</p>
+<h4>What is an Execution Plan?</h4>
+<p>In SQL Server Management Studio, an execution plan is a visual depiction of the numerous stages required to retrieve results from the database tables. Following the execution of a query, the query processing engine immediately generates several execution plans and chooses the one that produces the best-performing results. There are specifically two sorts of execution plans:</p>
+<ul class="tabs">
+
+    <li  style="border-radius: 10%;;" data-tab-target="#eep" class="active tab"><p>Estimated Execution Plan</p></li>
+    <li  style="border-radius: 10%;" data-tab-target="#aep" class="tab"><p>Actual Execution Plan</p></li>
+    <li  style="border-radius: 10%;" data-tab-target="#uep" class="tab" ><p>How to use Execution Plans</p></li>
+</ul>
+
+
+
+
+<div id="eep" data-tab-content  class="active" >
+    <p><b style="color: rgb(219, 14, 14)">Estimated Execution Plan</b> – As the name suggests, this type of execution plan is just a guess by the query processor about how the specific steps that are to be involved while returning the results. It is often generated before the query has been executed
+    </p>
+    <img class="pic2" src="ep3.png" alt="SQL-selecting estimated selection plan">
+    <br>
+     <img class="pic2" src="ep2.png" alt="SQL-selecting estimated selection plan">
+
+  
+  
+
+</div>
+
+
+<div id="aep" data-tab-content  >
+    <p>
+        <b style="color: rgb(219, 14, 14)">Actual Execution Plan</b> – The Actual Execution Plan is generated after the query has been executed. It shows the actual operations and steps involved while executing the query. This may or may not differ from the Estimated Execution Plan</p>
+        <img class="pic2" src="ep4.png" alt="SQL-selecting actual selection plan">
+        <br>
+        <img class="pic2" src="ep5.png" alt="SQL-selecting actual selection plan">
+
+</div>
+
+
+<div id="uep" data-tab-content  >
+    <p>Once you generate the execution plans as mentioned in the steps above, you’ll see something like the diagram below as in Figure. For estimated plans, it will generate as soon as you perform the step whereas for the actual execution plan it will be displayed only after the query has been executed.</p>
+    <p><b style="color: red">After understanding what the execution plan shows , we will know how to imporve our queries , for example : use less where filter , like filters , remote server queries , use lesser functions etc.</b></p>
+    <img class="pic2" src="ep1.png" alt="SQL-Understanding execution plans">
+    <p style="color: red">Hover over the execution plan, 
+        once you see it in results to see the following as below.
+        The plan is interpreted from <b>right-to-left</b> and <b>top-to-bottom.</b></p>
+    <img class="pic2" src="ep6.png" alt="SQL-Understanding execution plans">
+  
+    <p><b style="color: red">Physical Operation</b>: These are the operators that implement the operation as directed by the logical operators. All the physical operators are usually object which perform an operation. Some examples are Clustered Index Scan, Index Seek etc.
+    </p>
+        <p><b style="color: red">Logical Operation</b>: These operators describe the actual algebraic operation that is used to process the query. Examples are Right Anti Semi Join, Hash Join etc.
+        </p>
+            <p><b style="color: red">Actual Execution Mode</b>: This is the actual execution mode that is used by the processing engine to execute the query. Examples – Row and Batch
+            </p>
+                <p><b style="color: red">Estimated Execution Mode</b>: This is similar to Actual Execution Mode but shows the estimated value
+                </p>
+                    <p><b style="color: red">Storage</b>: This tells us how the query optimizer will store the results that are being extracted by the query
+                    </p>
+                        <p><b style="color: red">Number of Rows Read</b>: This returns the total number of records that are being read by the operator from the table index
+                        </p>
+                            <p><b style="color: red">Actual Number of Rows</b>: This tells us the total number of records that have been returned based on the condition in the WHERE clause
+                            </p>
+                                <p><b style="color: red">Actual Number of Batches</b>: If the execution mode for the query is a batch, then it will list the number of batches being executed to fetch the results
+                                </p>
+                                    <p><b style="color: red">Estimated I/O Cost</b>: This tells us the cost of the input/output operations of the result set
+                                    </p>
+                                        <p><b style="color: red">Estimated Operator Cost</b>: This is not an actual cost but relative information with respect to the other operators in the execution plan
+                                        </p>
+                                            <p><b style="color: red">Estimated CPU Cost</b>: The cost that the CPU will incur in order to process the operation
+                                            </p>
+                                                <p><b style="color: red">Estimated Subtree Cost</b>: The cost of the execution tree that is being currently read from right-to-left and top-to-bottom
+                                                </p>
+                                                    <p><b style="color: red">Number of Executions</b>: This tells us about the number of executions that the optimizer can handle in a single batch
+                                                    </p>
+                                                        <p><b style="color: red">Estimated Number of Executions</b>: This is also similar to the Number of Executions just the estimated value
+                                                        </p>
+                                                            <p><b style="color: red">Estimated Number of Rows</b>: The number of rows that the optimizer thinks will be returned by the operator
+                                                            </p>
+                                                                <p><b style="color: red">Estimated Number of Rows to be Read</b>: The number of rows that the optimizer thinks will be read by the operator
+                                                                </p>
+                                                                    <p><b style="color: red">Estimated Row Size</b>: The storage size each row in the operator
+                                                                    </p>
+                                                                        <p><b style="color: red">Actual Rebinds</b>: This tells us about how many times the reevaluation of the object must be done in order to process the operator
+                                                                        </p>
+                                                                            <p><b style="color: red">Actual Rewinds</b>: This property tells us if there were any changes in the correlated values for the object that is being processed
+                                                                            </p>
+                                                                                <p><b style="color: red">Ordered</b>: This property determines if the dataset on which the operation is to be performed in a sorted state or not
+                                                                                </p>
+                                                                                    <p><b style="color: red">Node ID</b>: It is the automatic assignment of a number in the order in which the operator is called in the execution plan reading from right-to-left and top-to-bottom 
+                                                                                    </p>
+</div>
+ <a href="helpfullinks.html"><h3>Next Stop: Questions or Suggestions</h3></a>
+</div>
+
+</body>
+</html> 
