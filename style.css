@@ -29,6 +29,7 @@ body {
   overflow-x: hidden;
   padding-top: 20px;
   padding-bottom: 20px;
+  scroll-padding-inline: auto;
 
 }
 
@@ -87,11 +88,14 @@ a:link {
             
               h3 {text-align: center; color-scheme: rgb(14, 12, 12);    font-size: 30px;
               font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; background-color: rgb(19, 20, 18); border-radius: 500%;  } 
+               h3 {text-align: center; color-scheme: rgb(14, 12, 12);    font-size: 30px;
+              font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ; background-color: rgb(19, 20, 18); border-radius: 500%;  } 
              
 
               p {text-align: left; color-scheme: rgb(14, 12, 12);  font-size: 20px;
               font-family:cursive;  } 
-            
+              h4 {text-align: left; color-scheme: rgb(14, 12, 12);  font-size: 20px;
+                font-family:cursive;  } 
             
                         .title{
                         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -174,21 +178,26 @@ a:link {
   margin-left: 20px;
   margin-right: 20px;
 }
-.scrollbar {
-	background-color: #2b8d3c;
-	float: right;
-	height: 300px;
-	margin-bottom: 5px;
-	margin-left: 5px;
-	margin-top: 5px;
-	width: 5pn;
-	overflow: scroll;
+
+
+
+::-webkit-scrollbar {
+  width: 15px;
 }
 
-.force-overflow {
-	min-height: 450px;
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
 }
-#style-1::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #0a6224;
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(108, 189, 90); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(240, 11, 11); 
 }
