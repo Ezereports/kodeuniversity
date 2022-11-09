@@ -29,7 +29,7 @@ body {
   overflow-x: hidden;
   padding-top: 20px;
   padding-bottom: 20px;
-  scroll-padding-inline: auto;
+  overflow: scroll; /* Show scrollbars */
 
 }
 
@@ -182,7 +182,7 @@ a:link {
 
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
 }
 
 /* Track */
