@@ -13,6 +13,24 @@
   border: 5px solid rgb(20, 16, 16);
 
 }
+
+.pic3{
+                
+  width: 70%;
+  height: 50%;           
+              
+  border-width: 5px;
+  border-color: rgb(146, 212, 40);
+  box-shadow: grey;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1%;
+  border: 5px solid rgb(246, 8, 20);
+
+}
+
+
 body {
     margin-left: 250px; /* Same as the width of the sidenav */
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
