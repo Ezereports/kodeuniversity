@@ -64,13 +64,11 @@ body {
 .sidenav a:hover {
   color: #f1f1f1;
 }
-
-@media screen and (max-width: 799px) {
-  #sidenav {
-      display:none;
+@media screen and (max-width: 768px) {
+  .sidenav { 
+ display: none;
   }
-}
-
+ }
 
 .main {
   margin-left: 10px; /* Same as the width of the sidenav */
