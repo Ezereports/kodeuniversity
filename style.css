@@ -31,13 +31,13 @@
 
 
 body {
-    margin-left: auto; /* Same as the width of the sidenav */
+    margin-left: 250px; /* Same as the width of the sidenav */
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .sidenav {
   height: 100%;
-  width: auto;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -76,10 +76,7 @@ body {
   padding: 0px 10px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+
 
 a:link {
               color: rgb(113, 221, 113);
