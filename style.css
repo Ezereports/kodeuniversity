@@ -19,15 +19,14 @@
   width: 70%;
   height: 50%;           
               
-  border-width: 5px;
+  border-width: 50px;
   border-color: rgb(146, 212, 40);
-  box-shadow: grey;
+  box-shadow: rgb(39, 23, 23);
   display: block;
   margin-left: auto;
   margin-right: auto;
   border-radius: 1%;
-  border: 5px solid rgb(246, 8, 20);
-
+  border: 5px solid rgb(17, 14, 14);
 }
 
 
