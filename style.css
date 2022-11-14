@@ -31,13 +31,13 @@
 
 
 body {
-    margin-left: 250px; /* Same as the width of the sidenav */
+    margin-left: auto; /* Same as the width of the sidenav */
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .sidenav {
   height: 100%;
-  width: 250px;
+  width: auto;
   position: fixed;
   z-index: 1;
   top: 0;
