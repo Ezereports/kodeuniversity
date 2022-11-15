@@ -66,7 +66,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .sidenav { 
- display:inline-table;
+ display:grid;
   }
  }
 
